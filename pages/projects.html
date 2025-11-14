@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malak Ahmed Saber - Data Scientist</title>
+    <link href="../assets/mainpage.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="../assets/projects.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="bg-animation"></div>
+
+    <div class="container">
+
+        <!-- Projects Section -->
+        <section id="projects" class="section active">
+            <h2 class="section-title">Projects</h2>
+
+            <div class="project-grid">
+            <a href="../projects/dataAnalytics_dashboard.html" class="card">
+                <h3>Data Analytics & Dashboards</h3>
+                <p>Power BI, Tableau, and business insights.</p>
+            </a>
+            <a href="../projects/dataScience.html" class="card">
+                <h3>Data Science Projects</h3>
+                <p>Data analysis, modeling, and exploration.</p>
+            </a>
+            <a href="../projects/swe.html" class="card">
+                <h3>Software Engineering Projects</h3>
+                <p>Web apps, APIs, and full-stack projects.</p>
+            </a>
+            <a href="../projects/ai.html" class="card">
+                <h3>Artificial Intelligence Projects</h3>
+                <p>ML, NLP, and computer vision projects.</p>
+            </a>
+            <a href="../projects/cs.html" class="card">
+                <h3>CS Fundamentals Projects</h3>
+                <p>Algorithms, data structures, OS, and theory.</p>
+            </a>
+            <a href="../projects/automation.html" class="card">
+                <h3>Automation & Workflow Orchestration Projects</h3>
+                <p>n8n, Make.com, and system integrations.</p>
+            </a>
+            <a href="../projects/dataEngineering.html" class="card">
+                <h3>Data Engineering Projects</h3>
+                <p>ETL pipelines, warehousing, and optimization.</p>
+            </a>
+        </div>
+
+        </section>
+
+
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <div class="nav-items">
+            <a href="../index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="about.html" class="nav-item">
+                <i class="fas fa-user"></i>
+                <span>About</span>
+            </a>
+            <a href="experience.html" class="nav-item">
+                <i class="fas fa-briefcase"></i>
+                <span>Experience</span>
+            </a>
+            <a href="projects.html" class="nav-item active">
+                <i class="fas fa-code"></i>
+                <span>Projects</span>
+            </a>
+            <a href="skills.html" class="nav-item">
+                <i class="fas fa-cogs"></i>
+                <span>Skills</span>
+            </a>
+            <a href="contact.html" class="nav-item">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+    </nav>
+
+
+
+
+    <script>
+        function showSection(sectionName) {
+            // Hide all sections
+            const sections = ['home', 'about', 'experience', 'projects', 'skills', 'contact'];
+            sections.forEach(section => {
+                document.getElementById(section).style.display = 'none';
+            });
+            
+            // Show selected section
+            document.getElementById(sectionName).style.display = 'block';
+            
+            // Update active nav item
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            event.target.closest('.nav-item').classList.add('active');
+        }

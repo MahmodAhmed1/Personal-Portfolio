@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahmoud Ahmed Abdo - Software Engineer</title>
+    <link href="../assets/mainpage.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="bg-animation"></div>
+
+    <div class="container">
+
+        <!-- Skills Section -->
+        <section id="skills" class="section active">
+            <h2 class="section-title">Technologies & Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Programming & Query Languages</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">MongoDB</span>             
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4>Full-Stack Developer</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">Laravel</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">NodeJS</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">MongoDB</span>             
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4>Machine Learning & AI</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">Computer Vision</span>
+                        <span class="skill-tag">Deep Learning</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4>Tools</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">APIs</span>
+                        <span class="skill-tag">Postman</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4>Data Engineering & Databases</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">ETL</span>
+                        <span class="skill-tag">Data Warehousing</span>
+                        <span class="skill-tag">SSIS</span>
+                        <span class="skill-tag">SQL Server</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Concepts of Programming</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">OOP</span>
+                        <span class="skill-tag">Data Structures</span>
+                        <span class="skill-tag">SOLID</span>
+                        <span class="skill-tag">Design Patterns</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Soft Skills</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Data Storytelling</span>
+                        <span class="skill-tag">Critical Thinking</span>
+                        <span class="skill-tag">Agile</span>
+                        <span class="skill-tag">Communication</span>
+                        <span class="skill-tag">Problem Solving</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <div class="nav-items">
+            <a href="../index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="about.html" class="nav-item">
+                <i class="fas fa-user"></i>
+                <span>About</span>
+            </a>
+            <a href="experience.html" class="nav-item">
+                <i class="fas fa-briefcase"></i>
+                <span>Experience</span>
+            </a>
+            <!-- 
+            <a href="projects.html" class="nav-item">
+                <i class="fas fa-code"></i>
+                <span>Projects</span>
+            </a>            
+            -->
+
+            <a href="skills.html" class="nav-item active">
+                <i class="fas fa-cogs"></i>
+                <span>Skills</span>
+            </a>
+            <a href="contact.html" class="nav-item">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+    </nav>
+
+
+
+    <script>
+        function showSection(sectionName) {
+            // Hide all sections
+            const sections = ['home', 'about', 'experience', 'projects', 'skills', 'contact'];
+            sections.forEach(section => {
+                document.getElementById(section).style.display = 'none';
+            });
+            
+            // Show selected section
+            document.getElementById(sectionName).style.display = 'block';
+            
+            // Update active nav item
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            event.target.closest('.nav-item').classList.add('active');
+        }

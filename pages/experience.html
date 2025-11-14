@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahmoud Ahmed Abdo - Software Engineer</title>
+    <link href="../assets/mainpage.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="bg-animation"></div>
+
+    <div class="container">
+
+        <!-- Experience Section -->
+        <section id="experience" class="section active">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-grid">
+
+                <div class="card">
+                    <h3>Artificial Intelligence with C++ Intern</h3>
+                    <div class="company">Orange</div>
+                    <div class="duration">Mar 2024 – Jul 2024 | Hybrid</div>
+                    <ul>
+                        <li>Gained understanding of AI principles and applications</li>
+                        <li>Implemented machine learning algorithms from scratch</li>
+                        <li>Worked with deep learning models and neural networks</li>
+                        <li>Developed AI solutions using C++.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Full-Stack (PHP-Laravel) Intern</h3>
+                    <div class="company">Information Technology Institute (ITI)</div>
+                    <div class="duration">Jun 2023 – Aug 2023 </div>
+                    <ul>
+                        <li>Learned front-end development with HTML, CSS, and JavaScript</li>
+                        <li>Gained back-end experience in PHP and Laravel</li>
+                        <li>Studied MySQL for database design and management</li>
+                        <li>Built a full e-commerce web app integrating all technologies</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>AI Model Training Specialist</h3>
+                    <div class="company">Scale AI</div>
+                    <div class="duration">Oct 2024 – Present</div>
+                    <ul>
+                        <li>Conducted validation of the input data used for model training, leading to continuous enhancement and optimization</li>
+                        <li>Developed and applied innovative strategies for training the AI model, involving diverse problem-solving methodologies</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <div class="nav-items">
+            <a href="../index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="about.html" class="nav-item">
+                <i class="fas fa-user"></i>
+                <span>About</span>
+            </a>
+            <a href="experience.html" class="nav-item active">
+                <i class="fas fa-briefcase"></i>
+                <span>Experience</span>
+            </a>
+            <!-- 
+            <a href="projects.html" class="nav-item">
+                <i class="fas fa-code"></i>
+                <span>Projects</span>
+            </a>            
+            -->
+            <a href="skills.html" class="nav-item">
+                <i class="fas fa-cogs"></i>
+                <span>Skills</span>
+            </a>
+            <a href="contact.html" class="nav-item">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+    </nav>
+
+
+
+    <script>
+        function showSection(sectionName) {
+            // Hide all sections
+            const sections = ['home', 'about', 'experience', 'projects', 'skills', 'contact'];
+            sections.forEach(section => {
+                document.getElementById(section).style.display = 'none';
+            });
+            
+            // Show selected section
+            document.getElementById(sectionName).style.display = 'block';
+            
+            // Update active nav item
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            event.target.closest('.nav-item').classList.add('active');
+        }

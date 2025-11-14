@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboards - Malak Ahmed Saber</title>
+    <link href="../assets/mainpage.css" rel="stylesheet">
+    <link href="../assets/projects.css" rel="stylesheet">
+    <link href="../assets/ProjectSpecificCss/dashboards.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="bg-animation"></div>
+    <div class="dashboard-container">
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1>Data Analytics & Dashboards</h1>
+            <p>Interactive dashboards and business intelligence solutions built with Power BI, Tableau, and custom analytics tools</p>
+        </div>
+
+        <!-- Filter Section -->
+        <div class="filter-section">
+            <button class="filter-btn active" onclick="filterDashboards('all')">
+                <i class="fas fa-th"></i> All Dashboards
+            </button>
+            <button class="filter-btn" onclick="filterDashboards('single')">
+                <i class="fas fa-chart-pie"></i> Single Page
+            </button>
+            <button class="filter-btn" onclick="filterDashboards('multi')">
+                <i class="fas fa-layer-group"></i> Multi Page
+            </button>
+        </div>
+        <!-- Tool Filter Section -->
+        <div class="filter-section">
+            <button class="filter-btn" onclick="filterByTool('all')">
+                <i class="fas fa-tools"></i> All Tools
+            </button>
+            <button class="filter-btn" onclick="filterByTool('Power BI')">
+                <i class="fas fa-chart-bar"></i> Power BI
+            </button>
+            <button class="filter-btn" onclick="filterByTool('Tableau')">
+                <i class="fas fa-table"></i> Tableau
+            </button>
+            <button class="filter-btn" onclick="filterByTool('Excel')">
+                <i class="fas fa-file-excel"></i> Excel
+            </button>
+        </div>
+
+
+        <!-- All Dashboards (no more section separators) -->
+        <div class="dashboard-grid">
+            <div class="dashboard-card" data-tool="Power BI" data-type="single" onclick="openPDF('Grocery Sales DWH Dashboard', '../assets/Dashboards/Kolia_DWH_Dashboard.pdf')">
+                <div class="dashboard-image">
+                    <img src="../assets/previewImages/DashboardsPreview/DWHdashboard.png" alt="Grocery Sales DWH Dashboard Preview" onerror="this.parentElement.innerHTML='<i class=\'fas fa-cogs\'></i>'">
+                </div>
+                <div class="dashboard-content">
+                    <div class="dashboard-meta">
+                        <span class="dashboard-type">Single Page</span>
+                        <div class="dashboard-tools">
+                            <span class="tool-tag">Power BI</span>
+                            <span class="tool-tag">SQL Server</span>
+                            <span class="tool-tag">Visual Studio Community - SSIS</span>
+                        </div>
+                    </div>
+                    <h3>Grocery Sales DWH Dashboard</h3>
+                    <p>Explore more : <a href="https://github.com/malakasaber/ETL_DWH_FinalProject" target="_blank" onclick="event.stopPropagation();">github.com/malakasaber/ETL_DWH_FinalProject</a></p>
+                </div>
+            </div>
+            
+            <div class="dashboard-card" data-tool="Power BI" data-type="multi" onclick="openPDF('Dream 2000 Sales Analytics', '../assets/Dashboards/Konecta_Task5.pdf')">>
+                <div class="dashboard-image">
+                    <img src="../assets/previewImages/DashboardsPreview/konectaTask5Preview.png" alt="Dream 2000 Sales Analytics Preview" onerror="this.parentElement.innerHTML='<i class=\'fas fa-chart-line\'></i>'">
+                </div>
+                <div class="dashboard-content">
+                    <div class="dashboard-meta">
+                        <span class="dashboard-type">Multi Page</span>
+                        <div class="dashboard-tools">
+                            <span class="tool-tag">Web Scaping</span>
+                            <span class="tool-tag">Power BI</span>
+                            <span class="tool-tag">Power Query</span>
+                            <span class="tool-tag">Documentation</span>
+                        </div>
+                    </div>
+                    <h3>Dream 2000 Sales Analytics</h3>
+                    <p>Associated with Konecta Intenship</p>
+                    <p>Real-time sales analytics with KPI tracking, revenue trends, and performance metrics across regions and product Categories.</p>
+                </div>
+            </div>
+
+            <div class="dashboard-card" data-tool="Power BI" data-type="single" onclick="openPDF('13 SuperMarkets Dashboard', '../assets/Dashboards/TechMind_Session2.pdf')">
+                <div class="dashboard-image">
+                    <img src="../assets/previewImages/DashboardsPreview/techmindSession2.png" alt="13 SuperMarkets Dashboard Preview" onerror="this.parentElement.innerHTML='<i class=\'fas fa-cogs\'></i>'">
+                </div>
+                <div class="dashboard-content">
+                    <div class="dashboard-meta">
+                        <span class="dashboard-type">Single Page</span>
+                        <div class="dashboard-tools">
+                            <span class="tool-tag">Power BI</span>
+                            <span class="tool-tag">Power Query</span>
+                        </div>
+                    </div>
+                    <h3>SuperMarkets Dashboard</h3>
+                    <p>Associated with Tech Mind Intenship</p>
+                    <p>
+                        Integrated 13 supermarket Excel sheets, including Noon, Arkan, Jumia, and others<br>
+                        Cleaned and applied transformations through Power Query<br>
+                        Combined all sheets into a single query<br>
+                        Generated insights from the combined sheet
+                    </p>
+                </div>
+            </div>
+
+            <div class="dashboard-card" data-tool="Power BI" data-type="multi" onclick="openPDF('Airbnb Analytics', '../assets/Dashboards/Konecta_Task4.pdf')">>
+                <div class="dashboard-image">
+                    <img src="../assets/previewImages/DashboardsPreview/konectaTask4Preview.png" alt="Airbnb Analytics Preview" onerror="this.parentElement.innerHTML='<i class=\'fas fa-shopping-cart\'></i>'">
+                </div>
+                <div class="dashboard-content">
+                    <div class="dashboard-meta">
+                        <span class="dashboard-type">Multi Page</span>
+                        <div class="dashboard-tools">
+                            <span class="tool-tag">Power BI</span>
+                        </div>
+                    </div>
+                    <h3>Airbnb Analytics</h3>
+                    <p>Associated with Konecta Intenship</p>
+                </div>
+            </div>
+
+            <div class="dashboard-card" data-tool="Power BI" data-type="multi" onclick="openPDF('Organization Sales across 2009/2010/2011/2012', '../assets/Dashboards/TechMind_Home2.pdf')">>
+                <div class="dashboard-image">
+                    <img src="../assets/previewImages/DashboardsPreview/techmindHome2.png" alt="Organization Sales across 2009/2010/2011/2012" onerror="this.parentElement.innerHTML='<i class=\'fas fa-shopping-cart\'></i>'">
+                </div>
+                <div class="dashboard-content">
+                    <div class="dashboard-meta">
+                        <span class="dashboard-type">Multi Page</span>
+                        <div class="dashboard-tools">
+                            <span class="tool-tag">Power BI</span>
+                            <span class="tool-tag">Power Query</span>
+                        </div>
+                    </div>
+                    <h3>Organization Sales across 2009/2010/2011/2012</h3>
+                    <p>Associated with Tech Mind Intenship</p>
+                </div>
+            </div>
+
+            <div class="dashboard-card" data-tool="Power BI" data-type="single" onclick="openPDF('Social Media Analysis Dashboard', '../assets/Dashboards/TechMind_Task1.pdf')">
+                <div class="dashboard-image">
+                    <img src="../assets/previewImages/DashboardsPreview/techmindTask1.png" alt="Social Media Analysis Dashboard Preview" onerror="this.parentElement.innerHTML='<i class=\'fas fa-cogs\'></i>'">
+                </div>
+                <div class="dashboard-content">
+                    <div class="dashboard-meta">
+                        <span class="dashboard-type">Single Page</span>
+                        <div class="dashboard-tools">
+                            <span class="tool-tag">Power BI</span>
+                        </div>
+                    </div>
+                    <h3>Social Media Analysis Dashboard</h3>
+                    <p>Associated with Tech Mind Intenship</p>
+                </div>
+            </div>
+
+            <div class="dashboard-card" data-tool="Power BI" data-type="multi" onclick="openPDF('Shopping Trends Analytics', '../assets/Dashboards/InstantTraining_Week1.pdf')">>
+                <div class="dashboard-image">
+                    <img src="../assets/previewImages/DashboardsPreview/instantTrainingTask1.png" alt="Shopping Trends Analytics" onerror="this.parentElement.innerHTML='<i class=\'fas fa-shopping-cart\'></i>'">
+                </div>
+                <div class="dashboard-content">
+                    <div class="dashboard-meta">
+                        <span class="dashboard-type">Multi Page</span>
+                        <div class="dashboard-tools">
+                            <span class="tool-tag">Power BI</span>
+                            <span class="tool-tag">SQL Server</span>
+                            <span class="tool-tag">Jupyter Notebook</span>
+                            <span class="tool-tag">EDA</span>
+                        </div>
+                    </div>
+                    <h3>Shopping Trends Analytics</h3>
+                    <p>Associated with Instant Software Solutions Training</p>
+                    <p>Connected to sql server, applied cleaning & EDA through jupyter and visualized using Power BI <br>
+                        Explore more : <a href="https://github.com/malakasaber/Clothing-Brand-EDA-and-Power-BI-Dashboard" target="_blank" onclick="event.stopPropagation();">github.com/malakasaber/Clothing-Brand-EDA-and-Power-BI-Dashboard</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="dashboard-card" data-tool="Power BI" data-type="multi" onclick="openPDF('Egypt Tech Salary Analytics', '../assets/Dashboards/TechMind_GP.pdf')">>
+                <div class="dashboard-image">
+                    <img src="../assets/previewImages/DashboardsPreview/techmindGP.png" alt="Egypt Tech Salary Analytics" onerror="this.parentElement.innerHTML='<i class=\'fas fa-shopping-cart\'></i>'">
+                </div>
+                <div class="dashboard-content">
+                    <div class="dashboard-meta">
+                        <span class="dashboard-type">Multi Page</span>
+                        <div class="dashboard-tools">
+                            <span class="tool-tag">Google Sheets</span>
+                            <span class="tool-tag">Power BI</span>
+                            <span class="tool-tag">Jupyter Notebook</span>
+                            <span class="tool-tag">EDA</span>
+                            <span class="tool-tag">Machine Learning</span>
+                            <span class="tool-tag">Django</span>
+                        </div>
+                    </div>
+                    <h3>Egypt Tech Salary Analytics</h3>
+                    <p>Associated with Tech Mind Internship</p>
+                    <p>Explore more : <a href="https://github.com/malakasaber/EgyptTech-SalaryPredictor" target="_blank" onclick="event.stopPropagation();">github.com/malakasaber/EgyptTech-SalaryPredictor</a></p>
+                </div>
+            </div>
+
+            <div class="dashboard-card" data-tool="Power BI" data-type="single" onclick="openPDF('Analytics Dashboard', '../assets/Dashboards/TechMind_Task3.pdf')">
+                <div class="dashboard-image">
+                    <img src="../assets/previewImages/DashboardsPreview/techmindTask3.png" alt="Analytics Preview" onerror="this.parentElement.innerHTML='<i class=\'fas fa-cogs\'></i>'">
+                </div>
+                <div class="dashboard-content">
+                    <div class="dashboard-meta">
+                        <span class="dashboard-type">Single Page</span>
+                        <div class="dashboard-tools">
+                            <span class="tool-tag">Power BI</span>
+                            <span class="tool-tag">SQL Server</span>
+                        </div>
+                    </div>
+                    <h3>Analytics Dashboard</h3>
+                    <p>Associated with Tech Mind Intenship</p>
+                </div>
+            </div>
+
+            <div class="dashboard-card" data-tool="Tableau" data-type="single" onclick="openPDF('Analytics Dashboard', '../assets/Dashboards/TechMind_TaskTableau.pdf')">
+                <div class="dashboard-image">
+                    <img src="../assets/previewImages/DashboardsPreview/techmindTaskTableau.png" alt="Analytics Preview" onerror="this.parentElement.innerHTML='<i class=\'fas fa-cogs\'></i>'">
+                </div>
+                <div class="dashboard-content">
+                    <div class="dashboard-meta">
+                        <span class="dashboard-type">Single Page</span>
+                        <div class="dashboard-tools">
+                            <span class="tool-tag">Tableau</span>
+                        </div>
+                    </div>
+                    <h3>Analytics Dashboard</h3>
+                    <p>Associated with Tech Mind Intenship</p>
+                </div>
+            </div>
+
+            <div class="dashboard-card" data-tool="Excel" data-type="single" onclick="openPDF('Analytics Dashboard', '../assets/Dashboards/ITI_excel.pdf')">
+                <div class="dashboard-image">
+                    <img src="../assets/previewImages/DashboardsPreview/ITI_excelDashboard.png" alt="Analytics Preview" onerror="this.parentElement.innerHTML='<i class=\'fas fa-cogs\'></i>'">
+                </div>
+                <div class="dashboard-content">
+                    <div class="dashboard-meta">
+                        <span class="dashboard-type">Single Page</span>
+                        <div class="dashboard-tools">
+                            <span class="tool-tag">Excel</span>
+                        </div>
+                    </div>
+                    <h3>Analytics Dashboard</h3>
+                    <p>Associated with ITI Training</p>
+                </div>
+            </div>
+
+            <div class="dashboard-card" data-tool="Power BI" data-type="single" onclick="openPDF('Analytics Dashboard', '../assets/Dashboards/ITI_PowerBI0.pdf')">
+                <div class="dashboard-image">
+                    <img src="../assets/previewImages/DashboardsPreview/ITI_PowerBI0.png" alt="Analytics Preview" onerror="this.parentElement.innerHTML='<i class=\'fas fa-cogs\'></i>'">
+                </div>
+                <div class="dashboard-content">
+                    <div class="dashboard-meta">
+                        <span class="dashboard-type">Single Page</span>
+                        <div class="dashboard-tools">
+                            <span class="tool-tag">Power BI</span>
+                        </div>
+                    </div>
+                    <h3>Analytics Dashboard</h3>
+                    <p>Associated ITI Training</p>
+                </div>
+            </div>
+
+            <div class="dashboard-card" data-tool="Power BI" data-type="single" onclick="openPDF('Analytics Dashboard', '../assets/Dashboards/ITI_PowerBI1.pdf')">
+                <div class="dashboard-image">
+                    <img src="../assets/previewImages/DashboardsPreview/ITI_PowerBI1.png" alt="Analytics Preview" onerror="this.parentElement.innerHTML='<i class=\'fas fa-cogs\'></i>'">
+                </div>
+                <div class="dashboard-content">
+                    <div class="dashboard-meta">
+                        <span class="dashboard-type">Single Page</span>
+                        <div class="dashboard-tools">
+                            <span class="tool-tag">Power BI</span>
+                        </div>
+                    </div>
+                    <h3>Analytics Dashboard</h3>
+                    <p>Associated ITI Training</p>
+                </div>
+            </div>
+
+            <div class="dashboard-card" data-tool="Power BI" data-type="single" onclick="openPDF('Analytics Dashboard', '../assets/Dashboards/ITI_PowerBI2.pdf')">
+                <div class="dashboard-image">
+                    <img src="../assets/previewImages/DashboardsPreview/ITI_PowerBI2.png" alt="Analytics Preview" onerror="this.parentElement.innerHTML='<i class=\'fas fa-cogs\'></i>'">
+                </div>
+                <div class="dashboard-content">
+                    <div class="dashboard-meta">
+                        <span class="dashboard-type">Single Page</span>
+                        <div class="dashboard-tools">
+                            <span class="tool-tag">Power BI</span>
+                        </div>
+                    </div>
+                    <h3>Analytics Dashboard</h3>
+                    <p>Associated ITI Training</p>
+                </div>
+            </div>
+
+            <div class="dashboard-card" data-tool="Power BI" data-type="single" onclick="openPDF('Analytics Dashboard', '../assets/Dashboards/ITI_PowerBI3.pdf')">
+                <div class="dashboard-image">
+                    <img src="../assets/previewImages/DashboardsPreview/ITI_PowerBI3.png" alt="Analytics Preview" onerror="this.parentElement.innerHTML='<i class=\'fas fa-cogs\'></i>'">
+                </div>
+                <div class="dashboard-content">
+                    <div class="dashboard-meta">
+                        <span class="dashboard-type">Single Page</span>
+                        <div class="dashboard-tools">
+                            <span class="tool-tag">Power BI</span>
+                        </div>
+                    </div>
+                    <h3>Analytics Dashboard</h3>
+                    <p>Associated ITI Training</p>
+                </div>
+            </div>
+
+            <div class="dashboard-card" data-tool="Tableau" data-type="single" onclick="openPDF('Analytics Dashboard', '../assets/Dashboards/ITI_Tableau1.pdf')">
+                <div class="dashboard-image">
+                    <img src="../assets/previewImages/DashboardsPreview/ITI_Tableau1.png" alt="Analytics Preview" onerror="this.parentElement.innerHTML='<i class=\'fas fa-cogs\'></i>'">
+                </div>
+                <div class="dashboard-content">
+                    <div class="dashboard-meta">
+                        <span class="dashboard-type">Single Page</span>
+                        <div class="dashboard-tools">
+                            <span class="tool-tag">Tableau</span>
+                        </div>
+                    </div>
+                    <h3>Analytics Dashboard</h3>
+                    <p>Associated ITI Training</p>
+                </div>
+            </div>
+
+            <div class="dashboard-card" data-tool="Tableau" data-type="single" onclick="openPDF('Analytics Dashboard', '../assets/Dashboards/ITI_Tableau2.pdf')">
+                <div class="dashboard-image">
+                    <img src="../assets/previewImages/DashboardsPreview/ITI_Tableau2.png" alt="Analytics Preview" onerror="this.parentElement.innerHTML='<i class=\'fas fa-cogs\'></i>'">
+                </div>
+                <div class="dashboard-content">
+                    <div class="dashboard-meta">
+                        <span class="dashboard-type">Single Page</span>
+                        <div class="dashboard-tools">
+                            <span class="tool-tag">Tableau</span>
+                        </div>
+                    </div>
+                    <h3>Analytics Dashboard</h3>
+                    <p>Associated ITI Training</p>
+                </div>
+            </div>
+
+        </div>
+
+    <!-- PDF Modal -->
+    <div id="pdfModal" class="pdf-modal">
+        <div class="pdf-modal-content">
+            <div class="pdf-modal-header">
+                <h3 class="pdf-modal-title">Dashboard Preview</h3>
+                <button class="close-modal" onclick="closePDF()">&times;</button>
+            </div>
+            <iframe id="pdfViewer" class="pdf-viewer" src=""></iframe>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <div class="nav-items">
+            <a href="../index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="../pages/about.html" class="nav-item">
+                <i class="fas fa-user"></i>
+                <span>About</span>
+            </a>
+            <a href="../pages/experience.html" class="nav-item">
+                <i class="fas fa-briefcase"></i>
+                <span>Experience</span>
+            </a>
+            <a href="../pages/projects.html" class="nav-item">
+                <i class="fas fa-code"></i>
+                <span>Projects</span>
+            </a>
+            <a href="../pages/skills.html" class="nav-item">
+                <i class="fas fa-cogs"></i>
+                <span>Skills</span>
+            </a>
+            <a href="../pages/contact.html" class="nav-item">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+    </nav>
+    <script src="../assets/js/projects-dashboard.js"></script>
+</body>
+</html>

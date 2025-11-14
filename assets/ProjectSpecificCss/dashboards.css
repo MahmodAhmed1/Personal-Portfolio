@@ -1,0 +1,279 @@
+
+/* Additional styles for dashboard page */
+.dashboard-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 80px 20px 120px;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #64ffda, #448aff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: #90a4ae;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Filter Section */
+.filter-section {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    gap: 15px;
+}
+
+.filter-btn {
+    padding: 12px 25px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    color: #90a4ae;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.filter-btn:hover {
+    background: rgba(100, 255, 218, 0.1);
+    color: #64ffda;
+    border-color: rgba(100, 255, 218, 0.3);
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background: linear-gradient(45deg, #64ffda, #448aff);
+    color: #0f0f23;
+    border-color: transparent;
+    box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
+}
+
+/* Hide/show cards based on filter */
+.dashboard-card.hidden {
+    display: none;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.dashboard-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 0;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(100, 255, 218, 0.15);
+    border-color: rgba(100, 255, 218, 0.3);
+}
+
+.dashboard-image {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(135deg, #37474f, #455a64);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: #64ffda;
+    position: relative;
+    overflow: hidden;
+}
+
+.dashboard-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dashboard-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(100, 255, 218, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.dashboard-card:hover .dashboard-image::before {
+    left: 100%;
+}
+
+.dashboard-content {
+    padding: 25px;
+}
+
+.dashboard-content h3 {
+    color: #64ffda;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.dashboard-content p {
+    color: #90a4ae;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.dashboard-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.dashboard-type {
+    background: rgba(100, 255, 218, 0.1);
+    color: #64ffda;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(100, 255, 218, 0.3);
+}
+
+.dashboard-tools {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tool-tag {
+    background: rgba(68, 138, 255, 0.1);
+    color: #448aff;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    border: 1px solid rgba(68, 138, 255, 0.3);
+}
+
+/* PDF Modal */
+.pdf-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    padding: 20px;
+}
+
+.pdf-modal-content {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.pdf-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #37474f;
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+.pdf-modal-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.close-modal:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.pdf-viewer {
+    flex: 1;
+    width: 100%;
+    border: none;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Section separators */
+.section-separator {
+    text-align: center;
+    margin: 60px 0 40px;
+}
+
+.section-separator h2 {
+    font-size: 2rem;
+    color: #448aff;
+    margin-bottom: 10px;
+}
+
+.section-separator p {
+    color: #78909c;
+    font-size: 1rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .pdf-modal {
+        padding: 10px;
+    }
+    
+    .pdf-modal-header {
+        padding: 15px;
+    }
+    
+    .pdf-modal-title {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & ML Projects - Malak Ahmed Saber</title>
+    <link href="../assets/mainpage.css" rel="stylesheet">
+    <link href="../assets/projects.css" rel="stylesheet">
+    <link href="../assets/ProjectSpecificCss/dashboards.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-animation"></div>
+    <div class="dashboard-container">
+
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1>AI & Machine Learning Projects</h1>
+            <p>Deep learning, computer vision, and natural language processing projects demonstrating applied AI skills</p>
+        </div>
+
+        <!-- Filter Section (AI Categories) -->
+        <div class="filter-section">
+            <button class="filter-btn active" onclick="filterDashboards('all')">
+                <i class="fas fa-brain"></i> All Projects
+            </button>
+            <button class="filter-btn" onclick="filterDashboards('cv')">
+                <i class="fas fa-eye"></i> Computer Vision
+            </button>
+            <button class="filter-btn" onclick="filterDashboards('nlp')">
+                <i class="fas fa-language"></i> NLP
+            </button>
+            <button class="filter-btn" onclick="filterDashboards('ml')">
+                <i class="fas fa-database"></i> Machine Learning
+            </button>
+        </div>
+
+        <!-- AI Projects Grid -->
+        <div class="dashboard-grid">
+
+            <!-- Brain Tumor Project -->
+            <div class="dashboard-card" data-tool="Python" data-type="cv" onclick="openPDF('Brain Tumor Classification & Segmentation', '../assets/AI/brain-tumor-report.pdf')">
+                <div class="dashboard-content">
+                    <div class="dashboard-meta">
+                        <span class="dashboard-type">Computer Vision</span>
+                        <div class="dashboard-tools">
+                            <span class="tool-tag">Deep Learning</span>
+                            <span class="tool-tag">Python</span>
+                            <span class="tool-tag">CNN</span>
+                        </div>
+                    </div>
+                    <h3>Brain Tumor Classification & Segmentation</h3>
+                    <p>Deep learning project using Convolutional Neural Networks for brain tumor detection and segmentation from MRI scans.</p>
+                    <p>Explore more: <a href="https://github.com/malakasaber/Brain-Tumor-Classification-Segmentation" target="_blank" onclick="event.stopPropagation();">github.com/malakasaber/Brain-Tumor-Classification-Segmentation</a></p>
+                </div>
+            </div>
+
+            <!-- Sentiment Analysis Project -->
+            <div class="dashboard-card" data-tool="Python" data-type="nlp" onclick="openPDF('Sentiment Analysis Project', '../assets/AI/sentiment-analysis-report.pdf')">
+                <div class="dashboard-content">
+                    <div class="dashboard-meta">
+                        <span class="dashboard-type">Natural Language Processing</span>
+                        <div class="dashboard-tools">
+                            <span class="tool-tag">NLP</span>
+                            <span class="tool-tag">Python</span>
+                            <span class="tool-tag">Machine Learning</span>
+                        </div>
+                    </div>
+                    <h3>Sentiment Analysis</h3>
+                    <p>Machine learning project applying NLP techniques to classify text sentiment as positive, negative, or neutral.</p>
+                    <p>Explore more: <a href="https://github.com/malakasaber/Sentiment-Analysis" target="_blank" onclick="event.stopPropagation();">github.com/malakasaber/Sentiment-Analysis</a></p>
+                </div>
+            </div>
+
+            <div class="dashboard-card" data-tool="Python" data-type="ml" onclick="openPDF('Machine Learning Models From Scratch', '../assets/AI/models-from-scratch-report.pdf')">
+                <div class="dashboard-content">
+                <div class="dashboard-meta">
+                    <span class="dashboard-type">Machine Learning, Deep Learning</span>
+                    <div class="dashboard-tools">
+                    <span class="tool-tag">Python</span>
+                    <span class="tool-tag">NumPy</span>
+                    <span class="tool-tag">ML from Scratch</span>
+                    </div>
+                </div>
+                <h3>Machine Learning Models From Scratch</h3>
+                <p>Implemented fundamental ML and DL algorithms from scratch in Python with NumPy—exploring the inner workings of each model.</p>
+                <p>Explore more: <a href="https://github.com/malakasaber/Machine-Learning-Models-From-Scratch" target="_blank" onclick="event.stopPropagation();">github.com/malakasaber/Machine-Learning-Models-From-Scratch</a></p>
+                </div>
+            </div>
+
+            <!-- Model Deployment Using Django -->
+            <div class="dashboard-card" data-tool="Python" data-type="ml" onclick="openPDF('Model Deployment Using Django', '../assets/AI/model-deployment-django-report.pdf')">
+                <div class="dashboard-content">
+                <div class="dashboard-meta">
+                    <span class="dashboard-type">Machine Learning, Deployment</span>
+                    <div class="dashboard-tools">
+                    <span class="tool-tag">Python</span>
+                    <span class="tool-tag">Django</span>
+                    <span class="tool-tag">ML Deployment</span>
+                    </div>
+                </div>
+                <h3>Model Deployment Using Django</h3>
+                <p>Created a web app using Django to serve machine learning models—turning offline models into interactive web-based services.</p>
+                <p>Explore more: <a href="https://github.com/malakasaber/Model-Deployment-using-Django" target="_blank" onclick="event.stopPropagation();">github.com/malakasaber/Model-Deployment-using-Django</a></p>
+                </div>
+            </div>
+
+            <!-- Hotel Reservation Booking Status Predictor with Flask -->
+            <div class="dashboard-card" data-tool="Python" data-type="ml" onclick="openPDF('Hotel Reservation Booking Status Predictor', '../assets/AI/hotel-status-predictor-report.pdf')">
+                <div class="dashboard-content">
+                <div class="dashboard-meta">
+                    <span class="dashboard-type">Machine Learning, Deployment</span>
+                    <div class="dashboard-tools">
+                    <span class="tool-tag">Python</span>
+                    <span class="tool-tag">Flask</span>
+                    <span class="tool-tag">Prediction App</span>
+                    </div>
+                </div>
+                <h3>Hotel Reservation Booking Status Predictor</h3>
+                <p>A Flask app predicting hotel booking status using machine learning models, wrapped in an interactive web interface.</p>
+                <p>Explore more: <a href="https://github.com/malakasaber/HotelReservation-BookingStatusPredictor-withFlask" target="_blank" onclick="event.stopPropagation();">github.com/malakasaber/HotelReservation-BookingStatusPredictor-withFlask</a></p>
+                </div>
+            </div>
+
+            <!-- Random Forest Hotel Reservation Model Deployment -->
+            <div class="dashboard-card" data-tool="Python" data-type="ml" onclick="openPDF('Random Forest Hotel Reservation Model Deployment', '../assets/AI/random-forest-deployment-report.pdf')">
+                <div class="dashboard-content">
+                <div class="dashboard-meta">
+                    <span class="dashboard-type">Machine Learning, Deployment</span>
+                    <div class="dashboard-tools">
+                    <span class="tool-tag">Python</span>
+                    <span class="tool-tag">Random Forest</span>
+                    <span class="tool-tag">Deployment</span>
+                    </div>
+                </div>
+                <h3>Random Forest Hotel Reservation Model Deployment</h3>
+                <p>Deployed a Random Forest-based hotel reservation status predictor, integrating the model into a deployable application.</p>
+                <p>Explore more: <a href="https://github.com/malakasaber/Random-Forest-Hotel-Reservation-Model-Deployment" target="_blank" onclick="event.stopPropagation();">github.com/malakasaber/Random-Forest-Hotel-Reservation-Model-Deployment</a></p>
+                </div>
+            </div>
+
+            <!-- IR Web Crawler Project -->
+            <div class="dashboard-card" data-tool="Python" data-type="nlp ml" onclick="openPDF('IR Web Crawler', '../assets/AI/ir-web-crawler-report.pdf')">
+                <div class="dashboard-content">
+                <div class="dashboard-meta">
+                    <span class="dashboard-type">Information Retrieval, NLP</span>
+                    <div class="dashboard-tools">
+                    <span class="tool-tag">Python</span>
+                    <span class="tool-tag">Web Crawler</span>
+                    <span class="tool-tag">IR</span>
+                    </div>
+                </div>
+                <h3>IR Web Crawler</h3>
+                <p>A web crawler built in Python for collecting and processing web data to support information retrieval tasks like indexing and search.</p>
+                <p>Explore more: <a href="https://github.com/malakasaber/IR_WebCrawler" target="_blank" onclick="event.stopPropagation();">github.com/malakasaber/IR_WebCrawler</a></p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <div class="nav-items">
+                <a href="../index.html" class="nav-item">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="../pages/about.html" class="nav-item">
+                    <i class="fas fa-user"></i>
+                    <span>About</span>
+                </a>
+                <a href="../pages/experience.html" class="nav-item">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Experience</span>
+                </a>
+                <a href="../pages/projects.html" class="nav-item">
+                    <i class="fas fa-code"></i>
+                    <span>Projects</span>
+                </a>
+                <a href="../pages/skills.html" class="nav-item">
+                    <i class="fas fa-cogs"></i>
+                    <span>Skills</span>
+                </a>
+                <a href="../pages/contact.html" class="nav-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <script src="../assets/js/projects-dashboard.js"></script>
+</body>
+</html>

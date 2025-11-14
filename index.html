@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahmoud Ahmed Abdo - Software Engineer</title>
+    <link href="assets/mainpage.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="bg-animation"></div>
+
+    <div class="container">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Mahmoud Ahmed Abdo</h1>
+                    <div class="subtitle">Software Engineer & Full-Stack Web Developer</div>
+                    <div class="description">
+                        strong experience in building scalable, secure, and high-performance web applications. Skilled in designing backend architectures, building REST APIs, and developing clean and responsive front-end interfaces.
+                        <br><br>
+                        I have hands-on experience across different technologies including Laravel, Node.js, Express, Java Spring Boot, React, and Flutter, with a solid understanding of databases, data structures, algorithms, and system design.
+                        <br><br>
+                        Passionate about solving real-world problems through technology, delivering end-to-end solutions, and continuously improving performance, code quality, and user experience.
+                        <br><br>
+                        <hr>
+                        <br>
+                        Nasr City, Cairo, Egypt
+                    </div>
+                    <a href="https://drive.google.com/file/d/1YjbeCeSVijvdUntZ2V6tCaQZWENKbo79/view?usp=sharing" 
+                    class="cta-button" 
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                    View My Summarized CV
+                    </a>
+                    
+                    <a href="https://drive.google.com/file/d/1YjbeCeSVijvdUntZ2V6tCaQZWENKbo79/view?usp=sharing" 
+                    class="cta-button" 
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                    View My Complete CV
+                    </a>
+
+                    
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/mahmoud-ahmed-abdo/" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/MahmodAhmed1" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:mahmodahmedabdo1@gmail.com">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="tel:01096694106">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <div class="profile-image">
+                        <div style="display: flex; justify-content: center; height: 100%; font-size: 80px;">
+                            <img class="fas fa-user" src="assets/profile.png" alt="Mahmoud">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <div class="nav-items">
+            <a href="index.html" class="nav-item active">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="pages/about.html" class="nav-item">
+                <i class="fas fa-user"></i>
+                <span>About</span>
+            </a>
+            <a href="pages/experience.html" class="nav-item">
+                <i class="fas fa-briefcase"></i>
+                <span>Experience</span>
+            </a>
+            <!--<a href="pages/projects.html" class="nav-item">
+                <i class="fas fa-code"></i>
+                <span>Projects</span>
+            </a>-->
+            <a href="pages/skills.html" class="nav-item">
+                <i class="fas fa-cogs"></i>
+                <span>Skills</span>
+            </a>
+            <a href="pages/contact.html" class="nav-item">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+    </nav>
+
+
+    <script>
+        function showSection(sectionName) {
+            // Hide all sections
+            const sections = ['home', 'about', 'experience', 'projects', 'skills', 'contact'];
+            sections.forEach(section => {
+                document.getElementById(section).style.display = 'none';
+            });
+            
+            // Show selected section
+            document.getElementById(sectionName).style.display = 'block';
+            
+            // Update active nav item
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            event.target.closest('.nav-item').classList.add('active');
+        }

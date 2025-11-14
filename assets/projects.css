@@ -1,0 +1,242 @@
+/* Grid layout - Enhanced to match main page */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+    padding: 0 20px;
+}
+
+/* Card style - Glassmorphism design matching main page */
+.project-grid .card {
+    display: block;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    color: inherit;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Animated shimmer effect on hover */
+.project-grid .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(100, 255, 218, 0.1), transparent);
+    transition: left 0.5s;
+    z-index: 1;
+}
+
+.project-grid .card:hover::before {
+    left: 100%;
+}
+
+/* Hover effect - Enhanced with glow */
+.project-grid .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(100, 255, 218, 0.1);
+    border-color: rgba(100, 255, 218, 0.3);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Title - Gradient text matching main page */
+.project-grid .card h3 {
+    margin: 0 0 15px;
+    font-size: 1.4rem;
+    color: #64ffda;
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(45deg, #64ffda, #448aff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transition: all 0.3s ease;
+}
+
+/* Description - Improved typography */
+.project-grid .card p {
+    margin: 0 0 20px;
+    font-size: 1rem;
+    color: #90a4ae;
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+}
+
+/* Tech stack tags (if you want to add them) */
+.project-grid .card .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.project-grid .card .tech-tag {
+    background: rgba(100, 255, 218, 0.1);
+    color: #64ffda;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(100, 255, 218, 0.3);
+    transition: all 0.3s ease;
+}
+
+.project-grid .card .tech-tag:hover {
+    background: rgba(100, 255, 218, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Project status indicator */
+.project-grid .card .status {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.project-grid .card .status.completed {
+    background: rgba(76, 175, 80, 0.2);
+    color: #4caf50;
+    border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.project-grid .card .status.in-progress {
+    background: rgba(255, 193, 7, 0.2);
+    color: #ffc107;
+    border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+.project-grid .card .status.concept {
+    background: rgba(156, 39, 176, 0.2);
+    color: #9c27b0;
+    border: 1px solid rgba(156, 39, 176, 0.3);
+}
+
+/* Featured project highlighting */
+.project-grid .card.featured {
+    grid-column: span 2;
+    background: rgba(100, 255, 218, 0.05);
+    border: 2px solid rgba(100, 255, 218, 0.2);
+}
+
+.project-grid .card.featured::after {
+    content: '★ Featured';
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    background: linear-gradient(45deg, #64ffda, #448aff);
+    color: #0f0f23;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+/* Project image/icon area */
+.project-grid .card .project-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #64ffda, #448aff);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #0f0f23;
+    position: relative;
+    z-index: 2;
+}
+
+/* Links within project cards */
+.project-grid .card .project-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.project-grid .card .project-link {
+    padding: 8px 16px;
+    background: rgba(68, 138, 255, 0.1);
+    color: #448aff;
+    border: 1px solid rgba(68, 138, 255, 0.3);
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.project-grid .card .project-link:hover {
+    background: rgba(68, 138, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(68, 138, 255, 0.2);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 30px;
+        padding: 0 10px;
+    }
+    
+    .project-grid .card {
+        padding: 25px;
+    }
+    
+    .project-grid .card.featured {
+        grid-column: span 1;
+    }
+    
+    .project-grid .card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .project-grid .card p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Dark theme compatibility */
+@media (prefers-color-scheme: dark) {
+    .project-grid .card {
+        background: rgba(255, 255, 255, 0.05);
+    }
+}
+
+/* Loading animation for project cards */
+.project-grid .card.loading {
+    background: linear-gradient(90deg, 
+        rgba(255, 255, 255, 0.05) 25%, 
+        rgba(255, 255, 255, 0.1) 50%, 
+        rgba(255, 255, 255, 0.05) 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
